@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  
+  <meta charset="utf-8">
+  <title>art101</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type="text/javascript" src="css/overlaypopup.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+
+  
+
+  <nav class="navbar">
+    <div class="container nav_pad">
+      <ul>
+        <li><a class="navbar-link" href="index.html">Main</a></li>
+        <li><a class="navbar-link" href="p1.html"> Project 1</a></li>
+        <li><a class="navbar-link" href="p2.html"> Project 2</a></li>
+        <li><a class="navbar-link" href="p3.html"> Project 3</a></li>
+        <li><a class="navbar-link" href="p4.html"> Project 4</a></li>
+        <li><a class="navbar-link" href="participation.html"> Participation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  
+  <div class="container">
+
+    <div class="row section">
+      <header id="header" class="twelve columns">
+        <h3>Quynh D Ngo Project 4</h3>
+
+        <div class="statement_text">
+
+          <em>
+            Yall are sleeping on Anne of Green Gables
+          </em>
+          <br>
+
+        </div>
+
+      </header>
+    </div>
+
+    <div class="row section">
+
+      <div class="four columns" style="overflow: visible;">
+        <a href="#p5-canvas-container"> <img src="images/ex5_thumb.png" style="width: 130%; height: auto; max-width: none;" /> </a>
+      </div>
+
+      <div class="eight columns" style="margin-left: 5%;">
+        <h5> Exercise 5 </h5>
+        <p>
+        <a href="p5_code/ex5_f/index.html">Run Exercise 5: Sound Matching Game</a><br>
+        <a href="p5_code/ex5_f/sketch.js">See code for Exercise 5</a>
+        </p>
+
+        <p>
+        <strong>1. An articulated statement and description of the assignment based on the nature of the requirements.</strong><br>
+        This exercise required creating an interactive sound-based game using p5.js and p5.sound. The assignment focused on implementing audio playback, user interaction, scoring systems, and scene management to create a playful media interface.
+        </p>
+
+        <p>
+        <strong>2. Your explanation on the assignment, in terms of the creative act and technical challenges you were asked to engage in</strong><br>
+        Sound Matching Game — A playful ear-training mini-lab where instrument images map to real sounds; clicks trigger audio, scoring, and a bonus stage. It explores the "playful media interface" context: simple visuals and immediate feedback guide you to learn by listening, while animated sprites keep the space lively. The technical challenges included implementing SceneManager for multiple scenes (title/instructions/game/bonus), synchronizing audio playback with visual feedback, creating a scoring system, and ensuring smooth transitions between game states.<br><br>
+        
+        <strong>Libraries used:</strong> p5.js (p5.min.js - canvas drawing, images, text), p5.sound (p5.sound.min.js - loadSound() and sound.play() for instrument sounds), SceneManager (scenemanager.js - SceneManager for Title/Instructions/Game/Score/Bonus scene transitions), and p5.play (p5.play.js - Sprite class for animated background sprites). The SceneManager library was crucial for organizing multiple game scenes and managing state transitions. The p5.sound library enabled audio playback and synchronization with visual interactions.
+        </p>
+
+        <p>
+        <strong>3. Your Point of view on what was successful and what could be done to improve on it.</strong><br>
+        Successfully creating an interactive sound matching game with multiple scenes was a major achievement. The audio-visual connection worked well, and the scoring system provided good feedback. To improve, I could add more instruments, create different difficulty levels, add more visual effects, or implement a high score system.
+        </p>
+
+        <p>
+        <strong>4. Any additional text observations and additional ideas that help with making your artwork more understandable.</strong><br>
+        The game demonstrates how sound can be used as a primary interaction mechanism in digital interfaces. The simple visuals and immediate feedback create an accessible learning experience. The animated sprites add visual interest without overwhelming the audio-focused gameplay. The bonus stage provides additional engagement and rewards player success. Best experienced in Chrome/Edge with sound enabled.<br><br>
+        
+        <strong>Approach to what Exercise 5 taught me relative to Project 4:</strong> Exercise 5 was foundational for Project 4 in several key ways. First, it introduced me to SceneManager, which became essential for Project 4's multi-scene interface (intro/help/main/rejection scenes). The experience managing scene transitions and state in Exercise 5 directly informed how I structured Project 4's complex navigation system. Second, Exercise 5 taught me how to use p5.sound for audio feedback (entrance/click/error sounds), which I applied in Project 4 to reinforce mood shifts and user interactions. Third, the exercise demonstrated how to create interactive interfaces with immediate feedback, which helped me design Project 4's tabbed dashboard and dynamic content redrawing. Finally, Exercise 5's approach to using audio cues to guide user experience informed how I used sound in Project 4 to create emotional resonance and highlight the satirical critique of bureaucratic interfaces.
+        </p>
+
+        <p>
+        <strong>JavaScript Files:</strong><br>
+        <a href="p5_code/ex5_f/sketch.js">sketch.js</a> (main game logic)<br>
+        <a href="p5_code/lib/p5.min.js">p5.min.js</a> (core p5.js - canvas drawing, images, text)<br>
+        <a href="p5_code/lib/p5.sound.min.js">p5.sound.min.js</a> (audio - loadSound() and sound.play() for instrument sounds)<br>
+        <a href="p5_code/lib/scenemanager.js">scenemanager.js</a> (scene management - SceneManager for Title/Instructions/Game/Score/Bonus transitions)<br>
+        <a href="p5_code/lib/p5.play.js">p5.play.js</a> (game library - Sprite class for animated background sprites)
+        </p>
+    </div>
+
+    
+    <div class="row section">
+      <div class="twelve columns" id="p5-canvas-container">
+      </div>
+    </div>
+
+    <div class="row section">
+
+      <div class="four columns" style="overflow: visible;">
+        <a href="p5_code/project4/index.html"> <img src="images/p4_thumb.png" style="width: 130%; height: auto; max-width: none;" /> </a>
+        <p><a href="p5_code/project4/index.html">Run Project 4</a></p>
+      </div>
+
+      <div class="eight columns" style="margin-left: 5%;">
+        <h5> Project 4 </h5>
+        <p>
+        <a href="p5_code/project4/index.html">Run Project 4</a><br>
+        </p>
+        <p>
+        <strong>1. An articulated statement and description of the assignment based on the nature of the requirements.</strong><br>
+        This project required creating an interactive interface that critiques institutional systems through design. The assignment focused on implementing a multi-scene interface with tabbed navigation, audio feedback, and interactive elements that expose systemic barriers, specifically exploring the "institutional/bureaucratic interface" context.
+        </p>
+
+        <p>
+        <strong>2. Your explanation on the assignment, in terms of the creative act and technical challenges you were asked to engage in</strong><br>
+        SJSU Student Portal Interface — A satirical mirror of the student center meant to highlight how bureaucracy feels for international students: slow, conditional, and often exclusionary. The "helpful" UI borrows real portal visuals but exposes contradictions—scholarships that exclude you, holds you can't clear, jobs you can't get. This aligns to the "institutional/bureaucratic interface" context: showing how interface tone and sequencing can gate resources.<br><br>
+        
+        Built in p5.js with SceneManager, it uses scene transitions for intro/help plus a tabbed main dashboard (To Do, Finances, Holds, Messages, Payment, Enrollment). Tabs redraw content dynamically; audio cues (entrance/click/error) reinforce mood shifts. Enrollment simulates waiting before a button appears; Finances links into a scholarship/job flow that dead-ends; Hold interactions route to rejection scenes to make the blockers explicit. Technical challenges included implementing SceneManager for multiple scenes, creating dynamic tab-based content redrawing, synchronizing audio cues with user interactions, and using timers to simulate bureaucratic delays. Other struggles I encountered included aligning frame boxes and UI elements consistently across different scenes, managing the complexity of multiple layers of interaction challenges, and ensuring that the satirical message came through clearly while maintaining functional interface elements.
+        </p>
+
+        <p>
+        <strong>3. Your Point of view on what was successful and what could be done to improve on it.</strong><br>
+        Successfully creating a satirical critique through interface design was a major achievement. The dead-end flows effectively communicate frustration, and the audio cues reinforce the emotional experience. The enrollment timer successfully simulates bureaucratic friction. To improve, I could have more aligned frame boxes and more layers to the challenges, add more instruments and sounds to make it more challenging and engaging, add more interactive elements, create additional rejection scenarios, add more detailed scholarship/job listings, or implement more complex state management for a more realistic simulation.
+        </p>
+
+        <p>
+        <strong>4. Any additional text observations and additional ideas that help with making your artwork more understandable.</strong><br>
+        The project demonstrates how interface design can be used as a form of social commentary. By mirroring real portal aesthetics while exposing systemic barriers, the work makes invisible frustrations visible. The dead-end scholarship flows, conditional holds, and delayed enrollment actions all serve to highlight how interface design can gate resources. Audio cues (entrance/click/error) create an emotional arc that reinforces the satirical message. The work shows how "helpful" interfaces can actually be exclusionary when underlying systems create barriers. Best experienced in Chrome/Edge with audio allowed.
+        </p>
+
+        <p>
+        <strong>JavaScript Files:</strong><br>
+        <a href="p5_code/project4/sketch.js">sketch.js</a> (main portal logic)<br>
+        <a href="p5_code/lib/p5.min.js">p5.min.js</a> (core p5.js - canvas drawing, UI elements, images, text, rectangles)<br>
+        <a href="p5_code/lib/p5.sound.min.js">p5.sound.min.js</a> (audio - loadSound() and sound.play() for entrance/click/error sound feedback)<br>
+        <a href="p5_code/lib/scenemanager.js">scenemanager.js</a> (scene management - SceneManager for Intro/Help/Main/Scholarships/Rejected scene transitions)
+        </p>
+    </div>
+
+    
+    <div class="row section">
+      <div class="twelve columns" id="p5-canvas-container-2">
+      </div>
+    </div>
+
+  <div class="container">
+
+    <div class="row section">
+      <div class="twelve columns">
+        <h5>Project Process Images</h5>
+      </div>
+    </div>
+
+    <div class="row section">
+      <div class="six columns">
+        <a href="images/p4_1.png"> <img src="images/p4_1.png" class="u-full-width"/> </a>
+        <a href="images/p4_2.png"> <img src="images/p4_2.png" class="u-full-width"/> </a>
+        <a href="p5_code/project4/assets/IMG_3591.jpg"> <img src="p5_code/project4/assets/IMG_3591.jpg" class="u-full-width"/> </a>
+        <p>Notes from Speed dating</p>
+      </div>
+
+      <div class="six columns">
+        <a href="images/p4_3.png"> <img src="images/p4_3.png" class="u-full-width"/> </a>
+      </div>
+    </div>
+
+    <div class="row section">
+      <div class="twelve columns">
+        <h5>Final Presentation</h5>
+        <p>
+          <a href="p5_code/project4/assets/final_presentation.pdf">View Final Presentation PDF</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+

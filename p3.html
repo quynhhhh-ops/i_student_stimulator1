@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  
+  <meta charset="utf-8">
+  <title>art101</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type="text/javascript" src="css/overlaypopup.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="p5_code/project3/datavis.js"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+
+  
+
+  <nav class="navbar">
+    <div class="container nav_pad">
+      <ul>
+        <li><a class="navbar-link" href="index.html">Main</a></li>
+        <li><a class="navbar-link" href="p1.html"> Project 1</a></li>
+        <li><a class="navbar-link" href="p2.html"> Project 2</a></li>
+        <li><a class="navbar-link" href="p3.html"> Project 3</a></li>
+        <li><a class="navbar-link" href="p4.html"> Project 4</a></li>
+        <li><a class="navbar-link" href="participation.html"> Participation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  
+  <div class="container">
+
+    <div class="row section">
+      <header id="header" class="twelve columns">
+        <h3>Quynh D Ngo Project 3</h3>
+
+        <div class="statement_text">
+
+          <em>
+            Yall are sleeping on Anne of Green Gables
+          </em>
+          <br>
+
+        </div>
+
+      </header>
+    </div>
+
+    <!-- Start Row //// -->
+    <div class="row section">
+
+      <!-- The column for showing the image and the link-->
+      <div class="four columns" style="overflow: visible;">
+        <a href="#p5-canvas-container"> <img src="images/p3_3.jpg" style="width: 130%; height: auto; max-width: none;" /> </a>
+      </div>
+
+      <!-- The column for artist statement and the link-->
+      <div class="eight columns" style="margin-left: 5%;">
+        <h5> Project 3 </h5>
+        <p>
+        <strong>1. An articulated statement and description of the assignment based on the nature of the requirements.</strong><br>
+        This was a group project that required creating an interactive ouija board interface using p5.js. The assignment focused on collaborative design, data visualization, and implementing an interactive question-and-answer system based on group-generated questions.
+        </p>
+
+        <p>
+        <strong>2. Your explanation on the assignment, in terms of the creative act and technical challenges you were asked to engage in</strong><br>
+        This was a group project that I did with Ariana, Aryel and Puck. It was a ouija board that we based off of deep ocean and aquatic life. We created it based on the questions we came up with as a group, one of which was "would you rather live in a spaceship or under the sea?" which explains the nautical and space themed design. The documented questions can be found in picture 1. I made the bare skeleton of the board with Evee, colored the fish elements as well as put them up the board. It was really nice to actually work with other people on something that doesn't involve any coding, though at the end we had to code it in p5.js.
+        </p>
+
+        <p>
+        <strong>3. Your Point of view on what was successful and what could be done to improve on it.</strong><br>
+        Successfully collaborating on both the physical design and digital implementation was a major achievement. The nautical and space theme came together well, and the transition from physical to digital was successful. To improve, I could have more varied types of demonstration of the data, enhance the interactivity, add more visual effects, create smoother animations, or expand the question set.
+        </p>
+
+        <p>
+        <strong>4. Any additional text observations and additional ideas that help with making your artwork more understandable.</strong><br>
+        The project demonstrates how collaborative design processes can inform digital interfaces. The deep ocean and aquatic life theme creates a cohesive visual language that connects the physical board to the digital experience. The combination of nautical and space elements reflects the group's question about living in a spaceship versus under the sea, showing how conceptual questions can drive visual design. The ouija board format provides an engaging framework for data visualization, making abstract question-and-answer data more interactive and visually interesting.
+        </p>
+          <a href="p5_code/project3/index.html">Run Final Version Project 3</a> <br>
+          <a href="p5_code/project3/sketch.js">See code for Final Version Project 3</a> <br>
+          <a href="p5_code/project3/datavis.js">See code for the data visualization for Project 3</a> <br>
+          <a href="p5_code/project3/questions_converted.json">See code for the questions for Project 3</a> <br>
+        </p>
+    </div>
+
+    
+    <div class="row section">
+      <div class="twelve columns" id="p5-canvas-container">
+        <!-- p5.js canvas will be created here -->
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+  
+
+  <div class="container">
+
+    <div class="row section">
+      <div class="twelve columns">
+        <h5>Project Process Images</h5>
+      </div>
+    </div>
+
+    <div class="row section">
+      <div class="six columns">
+        <a href="images/p3_1.jpg"> <img src="images/p3_1.jpg" class="u-full-width"/> </a>
+        <a href="images/p3_2.jpg"> <img src="images/p3_2.jpg" class="u-full-width"/> </a>
+      </div>
+
+      <div class="six columns">
+        <a href="images/p3_3.jpg"> <img src="images/p3_3.jpg" class="u-full-width"/> </a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+var qobj,aobj;
+var btn1,btn2,btn3,btn4;
+var head;
+var p1;
+var counter = 0;
+
+// optional gridvariable for grid displays
+
+let gridarr1 ;
+
+
+ 
+let font1;
+let images =[];  // you can make a list of images and then call them in a for loop or test
+
+let currentPage = 0;
+let boardImage;
+
+function preload()  {
+       qobj = loadJSON("p5_code/project3/questions_converted.json");
+       font1 = loadFont('assets/oswald.ttf');
+       images[0] = loadImage('assets/pizza.png');
+       images[1] = loadImage('assets/pineapple.png');
+       images[2] = loadImage('assets/tomato.png');
+       images[3] = loadImage('assets/mushroom.png');
+       boardImage = loadImage('assets/seaboard.jpg');
+
+}
+
+function setup() {
+     createCanvas(1200, 850);
+     // this is an option if you want to only use the Dom elements
+     //noCanvas();
+ 
+     background(0);
+     fill(100);
+     textAlign(LEFT);
+     textFont(font1);
+      
+}
+
+
+function draw() {
+    background(100);
+
+    if (currentPage == 0) {   // intro and title
+          tint(255,0,0, 120);
+        image(boardImage,10,10,width-20,height-20);
+        push();
+        translate(60,100);
+        fill(0,0,80);
+        textSize(40);
+        text ('Name: ' + qobj.group_member + " \n Group: " + qobj.group_name,0 ,0,800 );
+        textSize(35);
+        translate(740,0);
+        text ("My group's members \n were Aryel A, \n Ariana M, \n and Quynh N ",0 ,0, 800 );
+      
+
+        pop();
+
+
+
+    } else if (currentPage == 1) {
+      //let c = color(0,1);
+      noTint();
+      image(boardImage,10,10,width-20,height-20);
+     
+
+      push();
+      translate(100,30);
+      fill(120,220,240);
+      textSize(20);
+      let t = "These are my questions applied to our question board \n";
+      t+=  " with the answers in visual form. ";
+      text(t,0,0,300);  // the 4th argument is the textWidth per line.
+      pop();
+
+      // This is the raw version of the group data from datavis.js
+      push();
+      translate(100,130);
+      drawGroupData();
+      pop();
+ 
+
+    } else if (currentPage == 2) {
+      
+       /*
+       create 1 a version of your solo data in
+       the style of your choice. Just make sure you are sharing 
+       some kind of visual language idea of showing the data.
+       (i.e. bar graphs , counting circles, etc)
+       Make sure its a different idea of visualizing from the previous group 1.
+       */
+
+
+     push();
+     translate(40,50);
+     fill(200);
+     textSize(12);
+     let t = "see the code for details on what should be done here."
+     text(t,0,0,300);
+     pop();
+
+     // This is the raw version of the group data from datavis.js
+      push();
+      translate(100,130);
+      drawSoloData();
+      pop();
+ 
+    } else if (currentPage == 3) {
+      background(0);
+        /*
+       create 1 more version of your solo or group data in
+       the style of your choice. Just make sure you are sharing 
+       some kind of visual language idea of showing the data.
+       (i.e. bar graphs , counting circles, etc)
+       Make sure its a different idea of visualizing from the previous 2.
+       */
+       
+        push();
+        translate(40,50);
+        fill(200);
+        textSize(20);
+        let t = "see the code for details on what should be done here."
+        text(t,0,0,400);
+        pop();
+
+      push();
+      translate(100,130);
+      // draw solo or group
+      pop();
+
+
+
+    } 
+
+      
+    
+
+
+}
+
+
+function keyPressed() { 
+
+  
+    //console.log(key);
+     // or 
+    if ( key == '1' ) { 
+      console.log("Page 1");
+      currentPage = 1;
+
+     } else if ( key == '2' ) { 
+        console.log("Page 2");
+        currentPage = 2;
+        
+     } else if ( key == '3' ) { 
+        console.log("Page 3");
+        currentPage = 3;   
+     } else {
+        currentPage = 0;
+
+     }
+  
+    }
+
+  // code from example 1 and 2  , use it as you need.
+
+function createbuttons() {
+
+       createElement('br');
+  // create the button DOM element
+  btn1 =  createButton('Show your Questions');
+
+  // attach button listener
+  btn1.mousePressed(btn1pressed);
+  btn2 =  createButton('Show your Answers');
+  // attach button listener
+  btn2.mousePressed(btn2pressed);
+
+  btn3 =  createButton('Display Group Data');
+  // attach button listener
+  btn3.mousePressed(btn3pressed);
+
+  btn4 =  createButton('Display Solo Data');
+  // attach button listener
+  btn4.mousePressed(btn4pressed);
+
+}
+
+function btn1pressed(){
+   // a simple way of seeing if the json file has been loaded already.
+   // is it has it will return blob as true, therefore if (!false) it will be true..
+   // otherwise it will be false and not reload.
+  if (!qobj) {
+    // asynch loading command, with a callback function that gets called when done
+    qobj = loadJSON("p5_code/project3/questions_converted.json", justQuestions);
+    console.log("Questions");
+   
+  }
+}
+
+function btn2pressed(){
+   if (qobj.Agset  && qobj.Asoloset  ) {
+    // asynch loading command, with a callback function that gets called when done
+    console.log("Answers");
+    justAnswers();
+
+  }
+}
+
+function btn3pressed(){
+   if (qobj.Agset) {
+    // asynch loading command, with a callback function that gets called when done
+    console.log("Data");
+    drawGroupData();
+  }
+}
+
+function btn4pressed(){
+   if (qobj.Asoloset) {
+    // asynch loading command, with a callback function that gets called when done
+    console.log("Google Form Data");
+    drawSoloData();
+  }
+}
+
+
+
+// this is the callback way of loading an external file
+function justQuestions () {
+
+  let title = createP('Name:' + qobj.group_member + " Group: " + qobj.group_name);
+  title.style("font-family", "monospace");
+  title.style("color", "#888");
+  title.style("width", "800");
+  title.style("font-size", "17pt");
+  let qarr = qobj.Qset;
+
+  
+  for (let i = 0; i < qarr.length; i++) {
+
+    let q = qarr[i].Question;
+    let at = qarr[i].Qanswertype;
+    let ad = qarr[i].answerdata;
+    let qc = qarr[i].qcolor;
+
+  // this is how you can concatanate the rgb for css into a string.
+  // rgba(0-255,0-255,0-255,0-1)
+  var tempStr = "rgba(" + qc[0] + "," + qc[1] + "," + qc[2] + "," + "1)" ;
+  console.log(tempStr);
+     //  head.style("background-color", tempStr);
+
+  p1 = createP((i+1) + "." + q  + "<br>" + at + "<br>" + ad + "<br>" );
+  p1.style("font-family", "monospace");
+  p1.style("color", tempStr);
+  p1.style("width", "100" + (i * 20));
+  p1.style("font-size", "14pt");
+
+  }
+
+}
+
+
+  function justAnswers () {
+  
+    let qarr = qobj.Qset;
+    let agarr = qobj.Agset;
+    let asarr = qobj.Asoloset;
+    let temp = createP("<br>" );
+
+    for (let i = 0; i < agarr.length; i++) {
+   
+    let qc = qarr[i].qcolor;
+    let ag = agarr[i];
+    //let as = asarr[i];
+
+  // this is how you can concatanate the rgb for css into a string.
+  // rgba(0-255,0-255,0-255,0-1)
+  var tempStr = "rgba(" + qc[0] + "," + qc[1] + "," + qc[2] + "," + "1)" ;
+  console.log(tempStr);
+     //  head.style("background-color", tempStr);
+  p1 = createP((i+1) + "." + ag  + "<br>" );
+  p1.style("font-family", "monospace");
+  p1.style("color", tempStr);
+  p1.style("width", "100" + (i * 20));
+  p1.style("font-size", "14pt");
+
+  let tsa = "";
+  for (let j = 0; j < agarr.length; j++) { 
+   console.log(asarr[j][i])
+    tsa+= " " + asarr[j][i];
+
+  }
+
+  p1 = createP((i+1) + ". solo " + tsa  + "<br>" );
+  p1.style("font-family", "monospace");
+  p1.style("color", tempStr);
+  p1.style("width", "100" + (i * 20));
+  p1.style("font-size", "14pt");
+
+
+  }
+
+  // this shows the whole blob json data package
+  console.log("answers " + aobj);
+
+
+}
+  </script>
+
+</body>
+
+</html>

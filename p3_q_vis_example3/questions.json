@@ -1,0 +1,62 @@
+
+        {
+        "group_member":"Steve",
+        "group_name":"Solo",      
+        "Qset": 
+        [
+        
+        {
+        "Question":"Do you like Pizza?",
+        "Qanswertype":"boolean",
+        "answerdata":["I do" , "I do not"],
+        "qcolor":[255,0,255] 
+        },
+        
+        {
+        "Question":"Do you like unusal things on your Pizza?",
+        "Qanswertype":"multi",
+        "answerdata":["A. No way","B. Sometimes ","C. Lay it on me"],
+        "qcolor":[255,20,255] 
+        },
+        
+         {
+        "Question":"How much do you like Pineapples on Pizza?",
+        "Qanswertype":"scale",
+        "answerdata":["1. basically no ", "10. Im a total fan!"],
+        "qcolor":[190,100,0] 
+        },
+
+        {
+        "Question":"Do you think I will be blacklisted from Italy?",
+        "Qanswertype":"boolean",
+        "answerdata":["You are safe ", "Im afraid so"],
+        "qcolor":[190,200,0] 
+        }
+
+        ],
+       
+        "Agset":[0,"a",3,0],
+        "Asoloset":
+                [
+
+                [0,"b",7,1],
+                [1,"a",9,1],
+                [1,"a",3,1],
+                [0,"a",4,1],
+                [0,"a",1,1],
+                [0,"b",6,0],
+                [0,"b",8,1],
+                [0,"b",10,1],
+                [0,"b",7,1],
+                [0,"b",8,0],
+                [0,"c",5,1],
+                [0,"b",1,1],
+                [0,"b",5,1],
+                [0,"c",10,1],
+                [0,"a",1,0],
+                [0,"b",10,1]
+
+                ]
+        
+        }
+        
